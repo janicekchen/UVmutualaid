@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589817010297.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C447E797",
+    "lastKnownWriteTime" : 140402480906240,
+    "last_content_update" : 1589817010297,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "EBC56EEA",
+        "caption" : "vol_raw",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=vol_raw&cache_key=EBC56EEA",
+        "displayedObservations" : 1,
+        "environment" : "",
+        "expression" : "vol_raw",
+        "object" : "vol_raw",
+        "preview" : 0,
+        "totalObservations" : 1,
+        "variables" : 15
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

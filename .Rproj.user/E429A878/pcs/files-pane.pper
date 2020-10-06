@@ -1,0 +1,9 @@
+{
+    "path" : "~/Documents/covid19/data/processed",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
