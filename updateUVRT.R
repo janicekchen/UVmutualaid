@@ -21,6 +21,8 @@ class(responses$phone) <- "character"
 responses <- responses %>% 
   mutate(volunteer_req = "")
 
+responses[grep("White River Junction", responses$town), "town"] <- "WRJ"
+
 for (i in 1:nrow(responses)) {
   if (((responses$other_assist != "No" | responses$needs[i] != "I do not require assistance.") && (responses$services[i] != "I cannot volunteer."))) {
     responses[i, "volunteer_req"] <- "Both"
@@ -112,7 +114,7 @@ if (nrow(req_raw) > 0) {
                          "transport" = "",
                          "remote" = "",
                          "employment" = "",
-                         "others_asst" = req_raw$other_assist,
+                         "others_asst" = if_else(req_raw$other_assist != "No", req_raw$other_assist, "N"),
                          "p2p" = req_raw$p2p,
                          "long_term" = req_raw$long_term,
                          "fin_cont" = req_raw$fin_cont,
@@ -121,7 +123,6 @@ if (nrow(req_raw) > 0) {
                          stringsAsFactors = FALSE)
   
   needs_list <- c("Grocery/supply delivery", "Food donation", "Medical attention", "Childcare", "Shelter", "Transportation", "Remote learning assistance", "Employment")
-  
   
   for (i in 1:nrow(req_tidy)) {
     for(j in 1:length(needs_list)) {
